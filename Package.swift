@@ -5,7 +5,7 @@ let package = Package(
     name: "VaporApp",
     dependencies: [#for(dependency in dependencies) {
         // #(dependency.comment)
-        #(dependency.package),
+        .package(url: #(dependency.gitUrl), from: #(dependency.version)),
     }],
     targets: [
         .target(name: "App", dependencies: [#for(dependency in dependencies) {#for(include in dependency.includes) {"#(include)",
