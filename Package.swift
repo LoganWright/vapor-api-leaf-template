@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
     name: "#(packageName)",
     dependencies: [
-        // a server-side Swift web framework.
+        // vapor web framework
         .package(url: "https://github.com/vapor/vapor.git", from: "3.0.0"),   
     ],
     targets: [
