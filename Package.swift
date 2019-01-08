@@ -1,16 +1,14 @@
 // swift-tools-version:#(swiftToolsVersion)
 import PackageDescription
-//asdfasdf
+
 let package = Package(
     name: "#(packageName)",
-    dependencies: [#for(dependency in dependencies) {
-        // #(dependency.comment)
-        .package(url: #(dependency.gitUrl), from: #(dependency.version)),
-    }],
+    dependencies: [
+        // a server-side Swift web framework.
+        .package(url: "https://github.com/vapor/vapor.git", from: "3.0.0"),   
+    ],
     targets: [
-        .target(name: "App", dependencies: [
-            #for(dependency in dependencies) {#for(include in dependency.importTargets) {"#(include)",
-            }}]),
+        .target(name: "App", dependencies: ["Vapor"]),
         .target(name: "Run", dependencies: ["App"]),
         .testTarget(name: "AppTests", dependencies: ["App"])
     ]
