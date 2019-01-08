@@ -2,7 +2,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "VaporApp",
+    name: "#(packageName)",
     dependencies: [#for(dependency in dependencies) {
         // #(dependency.comment)
         .package(url: #(dependency.gitUrl), from: #(dependency.version)),
