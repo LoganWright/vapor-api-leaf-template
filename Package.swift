@@ -1,6 +1,6 @@
 // swift-tools-version:#(swiftToolsVersion)
 import PackageDescription
-
+//asdfasdf
 let package = Package(
     name: "#(packageName)",
     dependencies: [#for(dependency in dependencies) {
@@ -9,7 +9,7 @@ let package = Package(
     }],
     targets: [
         .target(name: "App", dependencies: [
-            #for(dependency in dependencies) {#for(include in dependency.includes) {"#(include)",
+            #for(dependency in dependencies) {#for(include in dependency.importTargets) {"#(include)",
             }}]),
         .target(name: "Run", dependencies: ["App"]),
         .testTarget(name: "AppTests", dependencies: ["App"])
