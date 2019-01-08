@@ -1,0 +1,12 @@
+/// PROJECT NAME
+- name of project
+
+/// DEPENDENCIES
+- add to manifest file, and link to `App`
+- add to configure.swift providers etc?
+
+/// 
+
+switching the thought process
+first, have a base project with nothing, and all the rest is done through editing... 
+so, the most barebones vapor project possible, and we just add all the goodies
