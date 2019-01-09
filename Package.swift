@@ -6,8 +6,8 @@ let package = Package(
     dependencies: [
         // vapor web framework
         .package(url: "https://github.com/vapor/vapor.git", from: "3.0.0"),
-        #if(fluent.include) {
-            .package(url: "https://github.com/vapor/fluent-#lowercased(fluent.db.name).git", from: "#(fluent.db.version")
+        #if(fluent) {
+            .package(url: "https://github.com/vapor/fluent-#lowercased(fluentDatabase).git", from: "#(fluentDatabaseVersion)")
         }
     ],
     targets: [
